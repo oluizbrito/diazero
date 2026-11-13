@@ -1,0 +1,9 @@
+{
+  "name": "dia-zero",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Jogo de sobrevivência isométrico no navegador: prepare a casa antes do Dia 0.",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

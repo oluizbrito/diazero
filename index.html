@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#14181f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Dia Zero</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="game"></canvas>
+  <div id="grain"></div>
+
+  <div id="hud" class="hidden">
+    <div class="hud-top">
+      <div class="card clock-card">
+        <div id="clock">Dia -7 · 08:00</div>
+        <div id="countdown" class="chip danger"></div>
+        <div id="floor-chip" class="chip floor hidden"></div>
+      </div>
+      <div class="hud-right">
+        <div class="card money" id="money">R$ 0</div>
+        <div class="card speed" id="speed">
+          <button data-speed="0" title="Pausar" data-icon="pause"></button>
+          <button data-speed="1" title="Normal" data-icon="play"></button>
+          <button data-speed="2" title="Rápido" data-icon="fast"></button>
+          <button data-speed="3" title="Muito rápido" data-icon="faster"></button>
+        </div>
+        <button class="card light-toggle" id="light-btn" title="Luz de cada cômodo (L apaga/acende tudo)"><span class="ic"></span><span class="lbl">Luz</span></button>
+        <div class="card alert-chip hidden" id="alert-chip"><span class="ic"></span><span class="lbl"></span></div>
+      </div>
+    </div>
+    <div class="left-col">
+      <div id="needs" class="card needs"></div>
+      <div id="stock" class="card stock" title="Ver estoque completo"></div>
+    </div>
+    <div id="task" class="card task hidden"></div>
+    <div id="build-bar" class="hidden"></div>
+    <nav id="toolbar">
+      <button data-tool="build"><span data-icon="build"></span>Construir</button>
+      <button data-tool="inventory"><span data-icon="box"></span>Estoque</button>
+      <button data-tool="plan"><span data-icon="plan"></span>Plano</button>
+      <button data-tool="travel"><span data-icon="car"></span>Compras</button>
+      <button data-tool="menu"><span data-icon="menu"></span>Menu</button>
+    </nav>
+  </div>
+
+  <div id="toasts"></div>
+  <div id="hover-tip" class="hidden"></div>
+  <div id="ctxmenu" class="hidden"></div>
+  <div id="light-panel" class="card hidden"></div>
+  <div id="modal-root"></div>
+
+  <div id="title-screen">
+    <div class="title-card">
+      <div class="title-badge" data-icon="biohazard"></div>
+      <h1>DIA ZERO</h1>
+      <p class="title-tag">Ninguém vai acreditar em você.</p>
+      <p>Um infectologista aposentado reconhece o padrão antes de todo mundo. O vírus viaja pelo ar e nenhuma máscara o detém.<br>Você tem <b>sete dias</b> para transformar sua casa num abrigo.</p>
+      <div class="title-buttons">
+        <button id="btn-continue" class="btn primary hidden">Continuar</button>
+        <button id="btn-new" class="btn">Novo jogo</button>
+      </div>
+      <small>v0.2 · protótipo</small>
+    </div>
+  </div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
